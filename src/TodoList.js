@@ -8,7 +8,7 @@ class TodoList extends Component {
   constructor(props){
     super(props);
     this.state = {
-      todos: [{task: "Finish React Class"}, {task: "Meet with Mentor"}]
+      todos: []
     };
     this.create = this.create.bind(this);
   }
@@ -18,7 +18,7 @@ class TodoList extends Component {
   }
   render(){
     const todos = this.state.todos.map(todo => {
-      return <Todo task={todo.task}/>
+      return <Todo task={todo.task} key={todo.id}/>
     })
     return (
       <div>

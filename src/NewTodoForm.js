@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import uuid from "uuid/v4";
+import uuid from "uuid/v4";
 // import "./NewTodoForm.css";
 
 class NewTodoForm extends Component {
@@ -16,7 +16,9 @@ class NewTodoForm extends Component {
   }
   handleSubmit(evt){
     evt.preventDefault();
-    this.props.createTodo(this.state);
+    //spread operator here is really just the 1 task in this.state that we added
+    //and we include uuid to add the id.
+    this.props.createTodo({...this.state, id: uuid()});
     //clear input
     this.setState({ task: ""});
   }
