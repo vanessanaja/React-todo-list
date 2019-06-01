@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./Todo.css";
+import "./Todo.css";
 // import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 class Todo extends Component {
@@ -9,6 +9,9 @@ class Todo extends Component {
   render(){
     return (
       <div>
+      <button>Edit</button>
+      <button>X</button>
+        <li>{this.props.task}</li>
       </div>
     )
   }
