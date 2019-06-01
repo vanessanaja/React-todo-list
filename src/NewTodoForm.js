@@ -22,6 +22,9 @@ class NewTodoForm extends Component {
     //clear input
     this.setState({ task: ""});
   }
+  handleRemove(evt){
+    
+  }
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
